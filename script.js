@@ -103,6 +103,37 @@ function pick(loc) {
   saveRecent(loc);
   loadWeather(loc);
 }
+/* ── GET CURRENT LOCATION ──────────────────────────── */
+function getCurrentLocation() {
+  if (!navigator.geolocation) {
+    showErr("Geolocation is not supported by your browser.");
+    return;
+  }
+
+  setLoading();
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      // Create a temporary location object for the weather fetch
+      const loc = {
+        name: "My Location",
+        country: "GPS",
+        lat: pos.coords.latitude,
+        lon: pos.coords.longitude,
+      };
+      loadWeather(loc);
+    },
+    (err) => {
+      let msg = "Could not get location.";
+      if (err.code === 1)
+        msg = "Location access denied. Please enable it in settings.";
+      showErr(msg);
+      // Revert UI from loading state
+      content.innerHTML = `<div class="empty"><div class="empty-icon">🌍</div><h3>Search for a city</h3></div>`;
+    },
+    { timeout: 8000 },
+  );
+}
 function saveRecent(loc) {
   recents = recents.filter((r) => !(r.lat === loc.lat && r.lon === loc.lon));
   recents.unshift(loc);
