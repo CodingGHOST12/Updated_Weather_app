@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast — Weather Intelligence</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scene" id="scene"></div>
+    <div class="rain-wrap" id="rain"></div>
+    <div class="err-pop" id="errPop">
+      <div class="err-head">
+        <span class="err-title">⚠ Notice</span
+        ><button onclick="hideErr()">✕</button>
+      </div>
+      <p id="errMsg">Something went wrong.</p>
+    </div>
+    <div class="shell">
+      <header class="hdr">
+        <div class="brand-icon">🌤</div>
+        <div>
+          <div class="brand-name">SkyCast</div>
+          <div class="brand-sub">Weather Intelligence</div>
+        </div>
+      </header>
+      <div class="search-wrap">
+        <div class="search-box">
+          <svg
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Search city — Roorkee, Gujrat…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="clear-btn" id="clearBtn" onclick="clearSearch()">
+            ✕
+          </button>
+        </div>
+        <div class="drop-panel" id="dropPanel" style="display: none">
+          <div class="drop-head" id="dropHead">Recent</div>
+          <div id="dropList"></div>
+        </div>
+      </div>
+      <div class="alert-bar" id="alertBar">
+        <span>⚠️</span><span id="alertTxt"></span
+        ><button
+          onclick="document.getElementById('alertBar').classList.remove('on')"
+        >
+          ✕
+        </button>
+      </div>
+      <div id="content">
+        <div class="empty">
+          <div class="empty-icon">🌍</div>
+          <h3>Where in the world?</h3>
+          <p>
+            Search any city above to get live weather conditions and a 5-day
+            outlook.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
