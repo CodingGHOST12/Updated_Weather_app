@@ -609,5 +609,34 @@ body {
   }
 }
 /* ── FOOTER ────────────────────────────────────────── */
-.footer { text-align: center; margin-top: 3rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
-.footer span { color: rgba(79, 195, 247, 0.5); }
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.footer span {
+  color: rgba(79, 195, 247, 0.5);
+}
+/* ── PARTICLES ─────────────────────────────────────── */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float linear infinite;
+  opacity: 0.25;
+}
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(var(--dx, 0px));
+  }
+}
