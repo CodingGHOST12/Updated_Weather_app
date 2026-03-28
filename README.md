@@ -10,6 +10,7 @@ A modern and responsive weather forecasting application created with Vanilla Jav
 * **Extreme Weather Alerts:** The application uses custom JavaScript logic to trigger high-priority UI warnings if extreme temperatures are detected in the API's weather data.
 * **Metric Toggles:** The application uses instant and localized state management to allow users to switch between Celsius and Fahrenheit units without needing to reload the DOM.
 * **Session Persistence:** The application uses the browser's localStorage API to save recent successful search queries for fast access.
+* * **Geolocation:** Search weather for current coordinates.
 
 ## 🛠️ Technologies Used
 
