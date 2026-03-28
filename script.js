@@ -250,3 +250,14 @@ function hideErr() {
   const p = document.getElementById("errPop");
   if (p) p.classList.remove("on");
 }
+(function spawnParticles() {
+  const c = document.getElementById('ptcls');
+  if(!c) return; 
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const s = 1.5 + Math.random() * 3;
+    p.style.cssText = `width:${s}px; height:${s}px; left:${Math.random() * 100}%; background:rgba(79,195,247,${.1 + Math.random() * .15}); animation-duration:${12 + Math.random() * 18}s; animation-delay:${-Math.random() * 20}s; --dx:${-30 + Math.random() * 60}px;`;
+    c.appendChild(p);
+  }
+})();
