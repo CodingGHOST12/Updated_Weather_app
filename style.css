@@ -640,3 +640,29 @@ body {
     transform: translateY(-10vh) translateX(var(--dx, 0px));
   }
 }
+/* ── LOCATION BUTTON ──────────────────────────────── */
+.location-action {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.loc-btn {
+  background: rgba(79, 195, 247, 0.1);
+  border: 1px solid rgba(79, 195, 247, 0.2);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.loc-btn:hover {
+  background: rgba(79, 195, 247, 0.2);
+  transform: translateY(-1px);
+}
