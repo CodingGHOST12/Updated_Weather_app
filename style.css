@@ -608,3 +608,6 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* ── FOOTER ────────────────────────────────────────── */
+.footer { text-align: center; margin-top: 3rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
+.footer span { color: rgba(79, 195, 247, 0.5); }
