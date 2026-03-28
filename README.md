@@ -17,3 +17,4 @@ A modern and responsive weather forecasting application created with Vanilla Jav
 * **Custom Styling:** The application uses custom CSS with features like CSS Variables, Keyframe Animations, and Backdrop Filters.
 * **Logic:** The application uses Modern Vanilla JavaScript with features like ES6+, Async/Await, and the Fetch API.
 * **Data Provider:** The application uses the OpenWeatherMap API to fetch weather data and geolocation data.
+*Developed by Gaurav Bisht*
